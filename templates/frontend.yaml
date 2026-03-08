@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: ${REPO_NAME}-${PROJECT_NAME}-${ENV}
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: frontend
+
+  template:
+    metadata:
+      labels:
+        app: frontend
+
+    spec:
+      containers:
+      - name: frontend
+        image: docker.io/${DOCKER_USERNAME}/frontend:${IMAGE_TAG}
+
+        ports:
+        - containerPort: 80

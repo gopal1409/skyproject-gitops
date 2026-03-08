@@ -1,0 +1,4 @@
+resources:
+  - ../templates/namespace.yaml
+  - ../templates/backend.yaml
+  - ../templates/frontend.yaml

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: ${REPO_NAME}-${PROJECT_NAME}-${ENV}
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: backend
+
+  template:
+    metadata:
+      labels:
+        app: backend
+
+    spec:
+      containers:
+      - name: backend
+        image: docker.io/${DOCKER_USERNAME}/backend:${IMAGE_TAG}
+
+        ports:
+        - containerPort: 8080
