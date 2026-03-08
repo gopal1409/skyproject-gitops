@@ -1,0 +1,5 @@
+namespace: skyproject-lnd-dev
+
+resources:
+- ../../base
+- namespace.yaml
