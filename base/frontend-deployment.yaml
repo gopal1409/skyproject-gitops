@@ -19,7 +19,7 @@ spec:
       containers:
       - name: frontend
 
-        image: docker.io/gopal1409/frontend:latest
+        image: docker.io/gopal1409/frontend:ba3e2a8bbb2b5e37332665a4cb9095f9f632d58c
 
         ports:
         - containerPort: 80

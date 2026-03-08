@@ -19,7 +19,7 @@ spec:
       containers:
       - name: backend
 
-        image: docker.io/gopal1409/backend:latest
+        image: docker.io/gopal1409/backend:ba3e2a8bbb2b5e37332665a4cb9095f9f632d58c
 
         ports:
         - containerPort: 8080
