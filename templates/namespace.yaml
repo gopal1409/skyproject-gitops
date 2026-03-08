@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: skynet
+  name: ${REPO_NAME}-${PROJECT_NAME}-${ENV}

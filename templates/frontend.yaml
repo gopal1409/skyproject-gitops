@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: skynet
+  namespace: ${REPO_NAME}-${PROJECT_NAME}-${ENV}
 
 spec:
   replicas: 2
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: docker.io/gopal1409/frontend
+        image: docker.io/${DOCKER_USERNAME}/frontend:${IMAGE_TAG}
 
         ports:
         - containerPort: 80
