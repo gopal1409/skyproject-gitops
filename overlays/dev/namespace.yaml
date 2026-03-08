@@ -1,5 +1,4 @@
-namespace: skyproject-lnd-dev
-
-resources:
-- ../../base
-- namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: skyproject-lnd-dev
