@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
-  namespace: ${REPO_NAME}-${PROJECT_NAME}-${ENV}
+  namespace: skynet
 
 spec:
   replicas: 2
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: docker.io/${DOCKER_USERNAME}/backend:${IMAGE_TAG}
+        image: docker.io/gopal1409/backend
 
         ports:
         - containerPort: 8080
