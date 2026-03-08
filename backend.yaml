@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: backend
   namespace: ${REPO_NAME}-${PROJECT_NAME}-${ENV}
 
 spec:
@@ -9,17 +9,17 @@ spec:
 
   selector:
     matchLabels:
-      app: frontend
+      app: backend
 
   template:
     metadata:
       labels:
-        app: frontend
+        app: backend
 
     spec:
       containers:
-      - name: frontend
-        image: docker.io/${DOCKER_USERNAME}/frontend:${IMAGE_TAG}
+      - name: backend
+        image: docker.io/${DOCKER_USERNAME}/backend:${IMAGE_TAG}
 
         ports:
-        - containerPort: 80
+        - containerPort: 8080
