@@ -1,4 +1,4 @@
-namespace.yamlnamespace: skyproject-lnd-dev
+namespace: skyproject-lnd-dev
 
 resources:
 - ../../base
